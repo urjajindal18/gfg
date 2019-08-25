@@ -1,0 +1,33 @@
+//Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
+//Method 2
+
+#include<iostream>
+using namespace std;
+
+int rotatee(int arr[],int n,int d)
+{
+    int aarr[d];
+    int i;
+    for(int i=0;i<d;i++)
+       aarr[i]=arr[i];
+    for(i=d;i<n;i++)
+        arr[i-d]=arr[i];
+    int j=0;
+    for (i=n-d;i<n;i++)
+    {arr[i]=aarr[j];
+    j++;}
+    for(i=0;i<n;i++)
+        cout<<arr[i]<<" ";
+}
+int main()
+{
+    int arr[]={1,2,3,4,5,6,7};
+    int i,n,d;
+    n=sizeof(arr)/sizeof(arr[0]);
+    cout<<"enter value for d";
+    cin>>d;
+
+    rotatee(arr,n,d);
+    return 0;
+}
+
