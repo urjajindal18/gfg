@@ -17,11 +17,11 @@ bool isPRime(int n)
 int main()
 {
     int n;
-    cout << "enter number" << endl;
+    cout<<"Enter Number"<<endl;
     cin>>n;
     bool res=isPRime(n);
     if (res==1)
-    cout<<"Prime number";
+    cout<<"Prime Number";
     else cout<<"Not a Prime Number";
     return 0;
 }
